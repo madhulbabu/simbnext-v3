@@ -15,6 +15,10 @@ configs.each do |k, v|
   ActiveRecord::Base.connection.execute("INSERT INTO installation_configs (name, value, created_at, updated_at) VALUES ('#{k}', '#{v}', NOW(), NOW()) ON CONFLICT (name) DO UPDATE SET value = '#{v}', updated_at = NOW();") rescue nil
 end
 
+# Hide Update Ribbon Banner
+Redis.current.set('latest_chatwoot_version', Chatwoot.config[:version]) rescue nil
+
+# Convert Favicons
 system('wget -q -O /tmp/fav.svg https://www.simbnext.com/favicon.svg')
 [16, 32, 57, 60, 72, 76, 96, 114, 120, 144, 152, 180, 192, 512].each do |s|
   system("convert -background none -resize #{s}x#{s} /tmp/fav.svg /app/public/favicon-#{s}x#{s}.png >/dev/null 2>&1")
@@ -23,4 +27,4 @@ system('wget -q -O /tmp/fav.svg https://www.simbnext.com/favicon.svg')
 end
 
 Rails.cache.clear rescue nil
-puts "=== SIMBNEXT BRANDING RE-APPLIED SUCCESSFULLY ==="
+puts "=== SIMBNEXT BRANDING & UPDATE RIBBON HIDDEN SUCCESSFULLY ==="
