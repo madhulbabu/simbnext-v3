@@ -1,0 +1,63 @@
+---
+import { AGENCY_COMPARISON } from '@/lib/content';
+---
+
+<section id="comparison" class="py-24 md:py-32 bg-[#FCF6F8] border-b border-[#F0DEE4]">
+  <div class="container-wide">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="chip-synthesia mb-4">
+        <span>The Model Shift</span>
+      </div>
+      <h2 class="headline-lg text-[#0E090D] [text-wrap:balance]">
+        Fragmented Vendors vs. One Accountable Partner
+      </h2>
+      <p class="mt-4 body-lg text-[#3A2A33] [text-wrap:balance]">
+        See why established businesses switch from coordinating multiple agencies to subscribing to SimbNext.
+      </p>
+    </div>
+
+    <!-- Comparison Card -->
+    <div class="max-w-4xl mx-auto rounded-3xl border border-[#F0DEE4] bg-white overflow-hidden shadow-xs">
+      
+      <!-- Table Headers -->
+      <div class="grid grid-cols-1 md:grid-cols-2 border-b border-[#F0DEE4]">
+        <div class="p-6 bg-[#FCF6F8] border-b md:border-b-0 md:border-r border-[#F0DEE4] text-center md:text-left">
+          <span class="text-xs font-mono font-bold text-[#7A636E] uppercase tracking-wider">
+            The Conventional Model
+          </span>
+          <h3 class="text-lg font-bold text-[#0E090D] mt-1">
+            4–6 Fragmented Vendors & Freelancers
+          </h3>
+        </div>
+        <div class="p-6 bg-[#FFF2F5] text-center md:text-left">
+          <span class="text-xs font-mono font-bold text-[#BE123C] uppercase tracking-wider">
+            The SimbNext Model
+          </span>
+          <h3 class="text-lg font-bold text-[#BE123C] mt-1">
+            One Senior Outsourced Department
+          </h3>
+        </div>
+      </div>
+
+      <!-- Table Rows (Simplified 4 Rows) -->
+      <div class="divide-y divide-[#F0DEE4]">
+        {AGENCY_COMPARISON.map((row) => (
+          <div class="grid grid-cols-1 md:grid-cols-2 text-sm">
+            <div class="p-5 flex items-start gap-3 bg-white text-[#7A636E] border-b md:border-b-0 md:border-r border-[#F0DEE4]">
+              <span class="text-rose-500 font-bold shrink-0">✕</span>
+              <span>{row.conventional}</span>
+            </div>
+            <div class="p-5 flex items-start gap-3 bg-rose-50/20 text-[#0E090D] font-medium">
+              <span class="text-[#BE123C] font-bold shrink-0">✓</span>
+              <span>{row.simbnext}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+</section>

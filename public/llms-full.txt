@@ -1,0 +1,63 @@
+# SimbNext — Complete Knowledge Base & Specifications for LLMs
+
+## Overview
+SimbNext is an outsourced digital operations department designed for established businesses, multi-location healthcare clinics, luxury architectural studios, real estate developers, and B2B enterprises. 
+
+Unlike traditional marketing agencies that rely on junior account managers and fragmented freelancers, SimbNext operates as a unified, disciplined department. Every engagement is structured around 6 specialized Desks and governed by binding Service Level Agreements (SLAs).
+
+## Geographic & Operational Footprint
+- **Headquarters & Regional Office**: 3rd Floor, Plot No 5, Inorbit Mall Rd, opposite Durgam Cheruvu, Doctor's Colony, HITEC City, Hyderabad, Telangana 500081, India.
+- **Geographic Markets**: Primary operational hub in Hyderabad, serving clients across Telangana, Andhra Pradesh, Bangalore, Mumbai, Delhi-NCR, the UAE, and global markets.
+- **Leadership**: Led by a 20+ year veteran in enterprise operations, systems architecture, and digital growth.
+
+## Core Value Proposition & Comparison
+- **Traditional Agency Model**: 4–5 disconnected vendors, 12+ hour delays on after-hours leads, junior managers experimenting with client budgets, finger-pointing when ad spend fails to convert.
+- **SimbNext Department Standard**: 1 single accountable partner, 3.2-second automated lead response & qualification 24/7, 20+ years senior operations oversight, monthly MBR scorecards delivered by the 3rd business day, and zero long-term lock-in.
+
+## The 6 Specialized Desks & Deliverables
+
+### 1. Strategy Desk
+- **Purpose**: High-level digital governance, resource allocation, and unit economics oversight.
+- **Deliverables**:
+  - Comprehensive Quarterly Digital Roadmaps
+  - Monthly Business Review (MBR) scorecards delivered by the 3rd business day
+  - Customer Acquisition Cost (CAC) and Lifetime Value (LTV) unit economics auditing
+  - Weekly prioritization sprints and bottleneck triage
+
+### 2. Growth Desk
+- **Purpose**: Predictable customer acquisition and revenue generation.
+- **Deliverables**:
+  - High-intent Google Search campaigns with negative keyword sculpting
+  - Meta performance advertising (Instagram & Facebook) with custom audience funnels
+  - Local 3-Pack Google Maps SEO optimization and review acquisition pipelines
+  - Continuous Conversion Rate Optimization (CRO) and landing page A/B testing
+
+### 3. Customer Desk
+- **Purpose**: Zero-latency lead qualification and 24/7 patient/client triage.
+- **Deliverables**:
+  - Custom AI lead triage & qualification agents
+  - 3.2-second average response latency on inbound inquiries 24/7/365
+  - Automated budget qualification, service routing, and appointment scheduling
+  - Real-time two-way synchronization with client CRMs (HubSpot, LeadSquared, custom sheets)
+
+### 4. Automation Desk
+- **Purpose**: Eliminating manual data entry, disconnected spreadsheets, and operational friction.
+- **Deliverables**:
+  - End-to-end webhook pipelines (n8n, Make, custom Node.js middleware)
+  - Automated lead routing, notifications, and invoicing pipelines
+  - API error monitoring, token rotation, and 99.8% uptime maintenance
+  - Average of 40+ hours of manual administrative labor eliminated monthly per client
+
+### 5. Digital Desk
+- **Purpose**: Enterprise web infrastructure, sub-second performance, and conversion design.
+- **Deliverables**:
+  - High-speed Next.js storefronts with 99/100 Core Web Vitals (sub-0.8s LCP)
+  - Dedicated conversion-optimized landing pages deployed within 5–7 business days
+  - Enterprise cloud hosting, SSL, DNS failover, and continuous security patching
+
+### 6. Content Desk
+- **Purpose**: Building undeniable market authority and trust.
+- **Deliverables**:
+  - Brand authority editorial assets and customer case stories
+  - High-converting vertical video (Reels, YouTube Shorts) scripting and editing
+  - Multi-platform publishing schedules and visual brand consistency

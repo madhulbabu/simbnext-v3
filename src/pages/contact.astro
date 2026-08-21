@@ -1,0 +1,175 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/lib/site-config';
+---
+
+<BaseLayout
+  title="Contact SimbNext — Schedule a Consultation"
+  description="Schedule a discovery consultation to discuss your digital operations, lead response latency, and web infrastructure."
+>
+  <!-- Light Header Section -->
+  <div class="pt-36 pb-20 bg-gradient-to-b from-[#FFF2F5] via-[#FCF6F8] to-white text-[#0E090D] border-b border-[#F0DEE4]">
+    <div class="container-wide max-w-3xl space-y-4 text-center mx-auto">
+      <span class="chip-synthesia">Direct Partnership</span>
+      <h1 class="headline-lg text-[#0E090D] [text-wrap:balance]">
+        Schedule Your Discovery Consultation
+      </h1>
+      <p class="body-lg text-[#3A2A33] [text-wrap:balance]">
+        We will analyze your current speed-to-lead latency, customer acquisition funnels, and web infrastructure—and present a customized 90-day roadmap.
+      </p>
+    </div>
+  </div>
+
+  <div class="py-20 bg-[#FFFFFF]">
+    <div class="container-wide max-w-4xl">
+      <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-start">
+        
+        <!-- Form Column -->
+        <div class="card-synthesia p-8 sm:p-10 space-y-6">
+          <div>
+            <h2 class="headline-sm text-[#0E090D]">
+              Book Your Discovery Consultation
+            </h2>
+            <p class="text-xs text-[#7A636E] mt-1">
+              Zero obligation. We will review your digital footprint before the call.
+            </p>
+          </div>
+
+          <form id="audit-form" class="space-y-4">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="name" class="block text-xs font-mono font-bold uppercase text-[#0E090D] mb-1.5">
+                  Your Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="e.g. Dr. Rajesh Rao / Vikram M."
+                  class="w-full px-4 py-3 rounded-xl border border-[#F0DEE4] bg-[#FCF6F8] text-sm text-[#0E090D] focus:outline-none focus:ring-2 focus:ring-[#FB4566]"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-xs font-mono font-bold uppercase text-[#0E090D] mb-1.5">
+                  Phone / WhatsApp *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+91 98765 XXXXX"
+                  class="w-full px-4 py-3 rounded-xl border border-[#F0DEE4] bg-[#FCF6F8] text-sm text-[#0E090D] focus:outline-none focus:ring-2 focus:ring-[#FB4566]"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-mono font-bold uppercase text-[#0E090D] mb-1.5">
+                Work Email Address *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="rajesh@yourcompany.com"
+                class="w-full px-4 py-3 rounded-xl border border-[#F0DEE4] bg-[#FCF6F8] text-sm text-[#0E090D] focus:outline-none focus:ring-2 focus:ring-[#FB4566]"
+              />
+            </div>
+
+            <div>
+              <label for="vertical" class="block text-xs font-mono font-bold uppercase text-[#0E090D] mb-1.5">
+                Industry / Business Type *
+              </label>
+              <select
+                id="vertical"
+                name="vertical"
+                required
+                class="w-full px-4 py-3 rounded-xl border border-[#F0DEE4] bg-[#FCF6F8] text-sm text-[#0E090D] focus:outline-none focus:ring-2 focus:ring-[#FB4566]"
+              >
+                <option value="clinic">Healthcare & Specialized Clinic</option>
+                <option value="interiors">Luxury Interior Design / Architecture</option>
+                <option value="realestate">Boutique Real Estate / Channel Partner</option>
+                <option value="b2b">High-Ticket B2B & Industrial Manufacturing</option>
+                <option value="other">Other Established Enterprise</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="bottleneck" class="block text-xs font-mono font-bold uppercase text-[#0E090D] mb-1.5">
+                Primary Goal / Bottleneck
+              </label>
+              <textarea
+                id="bottleneck"
+                name="bottleneck"
+                rows="3"
+                placeholder="e.g. We lose leads after clinic hours / Want to replace 3 fragmented agencies..."
+                class="w-full px-4 py-3 rounded-xl border border-[#F0DEE4] bg-[#FCF6F8] text-sm text-[#0E090D] focus:outline-none focus:ring-2 focus:ring-[#FB4566]"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="button-primary w-full text-center"
+            >
+              <span>Request Consultation</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </button>
+
+            <div id="form-success" class="hidden p-4 rounded-xl bg-rose-50 text-[#FB4566] border border-[#F0DEE4] text-xs text-center font-medium">
+              Thank you! Our senior operations team has received your consultation request and will reach out within 2 hours.
+            </div>
+          </form>
+        </div>
+
+        <!-- Direct Contact Card -->
+        <div class="space-y-6">
+          <div class="card-synthesia p-8 space-y-5">
+            <span class="chip-synthesia">Direct Hotline</span>
+            <h3 class="headline-sm text-[#0E090D]">
+              Prefer to Chat Immediately?
+            </h3>
+            <p class="text-xs text-[#7A636E] leading-relaxed">
+              Connect directly with our team on WhatsApp for an immediate response or live demonstration on your own phone.
+            </p>
+            <a
+              href={`https://wa.me/${SITE.phoneRaw}`}
+              class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-full bg-[#FB4566] hover:bg-[#E11D48] text-white font-bold text-sm shadow-md transition-colors"
+            >
+              <span>Open WhatsApp Direct</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#FCF6F8] border border-[#F0DEE4] space-y-3 text-xs text-[#3A2A33]">
+            <div class="font-bold text-[#0E090D] uppercase font-mono tracking-wider">Office Details</div>
+            <div>📍 {SITE.location}</div>
+            <div>📞 Direct Phone: <a href={`tel:${SITE.phone}`} class="font-semibold text-[#FB4566]">{SITE.phone}</a></div>
+            <div>✉️ Inquiries: <a href={`mailto:${SITE.email}`} class="font-semibold text-[#FB4566]">{SITE.email}</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('audit-form');
+  const successMsg = document.getElementById('form-success');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (successMsg) {
+      successMsg.classList.remove('hidden');
+      form.reset();
+    }
+  });
+</script>

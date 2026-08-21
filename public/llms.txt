@@ -1,0 +1,20 @@
+# SimbNext
+
+> The Outsourced Digital Department for Established Businesses.
+
+SimbNext acts as an outsourced digital department for established businesses, healthcare clinics, luxury interior design studios, real estate firms, and B2B enterprises. We replace fragmented freelancers and traditional marketing agencies with 6 dedicated monthly Desks governed by strict Service Level Agreements (SLAs).
+
+## Core Services
+
+- [The 6 Desks](https://www.simbnext.com/services): Overview of Strategy, Growth, Customer, Content, Automation, and Digital Desks.
+- [Operating Model & SLAs](https://www.simbnext.com/how-we-work): 5-Day Setup Sprint, monthly delivery rhythm, and SLA guarantees.
+- [Verified Case Studies](https://www.simbnext.com/case-studies): Verified client results across healthcare, luxury interiors, real estate, and B2B.
+- [Healthcare & Clinics Solution](https://www.simbnext.com/solutions/healthcare-clinics): Zero-latency patient triage and local search dominance.
+- [Luxury Interiors Solution](https://www.simbnext.com/solutions/luxury-interiors): High-ticket client qualification and architectural portfolio web presence.
+- [Boutique Real Estate Solution](https://www.simbnext.com/solutions/boutique-real-estate): 3.2s ad lead routing and automated walkthrough bookings.
+- [High-Ticket B2B Solution](https://www.simbnext.com/solutions/high-ticket-b2b): Automated RFQ workflows and enterprise search positioning.
+- [Discovery Consultation](https://www.simbnext.com/contact): Schedule a 20-minute discovery consultation.
+
+## Optional
+
+- [Full LLM Documentation](https://www.simbnext.com/llms-full.txt): Complete detailed specifications and desk deliverables.

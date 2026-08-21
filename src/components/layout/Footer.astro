@@ -1,0 +1,96 @@
+---
+import { FOOTER_LINKS, SITE } from '@/lib/site-config';
+---
+
+<footer class="bg-[#0E090D] text-[#F1DADA] pt-20 pb-12 border-t border-white/10">
+  <div class="container-wide">
+    <div class="grid gap-12 lg:grid-cols-5 pb-16 border-b border-white/10">
+      
+      <!-- Brand & Mission Column -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="/" class="inline-flex items-center gap-2">
+          <img src="/simbnext-logo-dark.svg" alt="SimbNext" width="180" height="36" class="h-8 sm:h-9 w-auto object-contain" />
+        </a>
+        <p class="text-[#F1DADA]/85 text-sm max-w-sm leading-relaxed">
+          {SITE.tagline}. We manage all your recurring digital operations under guaranteed monthly SLAs with zero agency chaos.
+        </p>
+
+        <div class="pt-2 space-y-2 text-xs text-[#F1DADA]/80 font-mono">
+          <div>📍 {SITE.location}</div>
+          <div>📞 <a href={`https://wa.me/${SITE.phoneRaw}`} class="text-[#FB4566] hover:underline">{SITE.phone}</a></div>
+          <div>✉️ <a href={`mailto:${SITE.email}`} class="text-[#FB4566] hover:underline">{SITE.email}</a></div>
+        </div>
+      </div>
+
+      <!-- Column 1: Company -->
+      <div>
+        <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-[#F1DADA]/80 mb-4">
+          Company
+        </h3>
+        <ul class="space-y-2.5 text-sm">
+          {FOOTER_LINKS.Company.map((link) => (
+            <li>
+              <a href={link.href} class="text-[#F1DADA]/85 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Column 2: The 6 Desks -->
+      <div>
+        <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-[#F1DADA]/80 mb-4">
+          The 6 Desks
+        </h3>
+        <ul class="space-y-2.5 text-sm">
+          {FOOTER_LINKS.Desks.map((link) => (
+            <li>
+              <a href={link.href} class="text-[#F1DADA]/85 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Column 3: Solutions & Legal -->
+      <div>
+        <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-[#F1DADA]/80 mb-4">
+          Solutions & Legal
+        </h3>
+        <ul class="space-y-2.5 text-sm">
+          {FOOTER_LINKS.Solutions.map((link) => (
+            <li>
+              <a href={link.href} class="text-[#F1DADA]/85 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li class="pt-2 border-t border-white/10"></li>
+          {FOOTER_LINKS.Legal.map((link) => (
+            <li>
+              <a href={link.href} class="text-[#F1DADA]/80 hover:text-white transition-colors text-xs">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F1DADA]/80">
+      <div>
+        &copy; {new Date().getFullYear()} {SITE.legalName}. All rights reserved. Operating under strict Service Level Agreements.
+      </div>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2 text-[#98FE7F] font-mono">
+          <span class="h-2 w-2 rounded-full bg-[#98FE7F] animate-pulse"></span>
+          All Desks Operational (99.8% SLA)
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>

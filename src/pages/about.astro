@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/lib/site-config';
+---
+
+<BaseLayout
+  title="About SimbNext — Founder Philosophy & Leadership"
+  description="SimbNext was built on two decades of corporate systems execution. We replace fragmented agencies with one disciplined digital operations partner."
+>
+  <!-- Light Header Section -->
+  <div class="pt-36 pb-20 bg-gradient-to-b from-[#FFF2F5] via-[#FCF6F8] to-white text-[#0E090D] border-b border-[#F0DEE4]">
+    <div class="container-wide max-w-3xl space-y-4 text-center mx-auto">
+      <span class="chip-synthesia">Leadership & Philosophy</span>
+      <h1 class="headline-lg text-[#0E090D] [text-wrap:balance]">
+        Two Decades of Systems Rigor
+      </h1>
+      <p class="body-lg text-[#3A2A33] [text-wrap:balance]">
+        We built SimbNext because established businesses are tired of babysitting junior agencies and fragmented freelancers.
+      </p>
+    </div>
+  </div>
+
+  <div class="py-20 bg-[#FFFFFF]">
+    <div class="container-wide max-w-4xl space-y-12">
+      <!-- Founder Philosophy Card -->
+      <div class="card-synthesia p-8 md:p-12 space-y-6">
+        <span class="chip-synthesia">Our Core Thesis</span>
+        <h2 class="headline-md text-[#0E090D]">
+          Accountability is the only metric that matters.
+        </h2>
+        <p class="text-base text-[#3A2A33] leading-relaxed">
+          Traditional digital agencies make their money by selling fragmented tasks—an SEO package here, a web redesign there, and an ad retainer that points fingers whenever lead conversion drops.
+        </p>
+        <p class="text-base text-[#3A2A33] leading-relaxed">
+          At SimbNext, we approach digital operations like a senior corporate department. We take full ownership of your strategy, customer acquisition, 24/7 AI lead operations, content, and web infrastructure governed by strict monthly Service Level Agreements (SLAs).
+        </p>
+      </div>
+
+      <!-- 3 Tenets -->
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="p-6 rounded-2xl bg-[#FCF6F8] border border-[#F0DEE4] space-y-3">
+          <div class="text-xl font-bold font-mono text-[#FB4566]">01</div>
+          <h3 class="text-base font-bold text-[#0E090D]">No Junior Hand-offs</h3>
+          <p class="text-xs text-[#7A636E] leading-relaxed">
+            Your strategy and operations are directed by seasoned systems veterans with 20+ years experience, not recent graduates learning on your dime.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#FCF6F8] border border-[#F0DEE4] space-y-3">
+          <div class="text-xl font-bold font-mono text-[#FB4566]">02</div>
+          <h3 class="text-base font-bold text-[#0E090D]">3.2s Speed-to-Lead</h3>
+          <p class="text-xs text-[#7A636E] leading-relaxed">
+            We deploy proprietary AI lead triage agents that engage every inbound inquiry within seconds, stopping lead leakage after hours.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#FCF6F8] border border-[#F0DEE4] space-y-3">
+          <div class="text-xl font-bold font-mono text-[#FB4566]">03</div>
+          <h3 class="text-base font-bold text-[#0E090D]">Zero Long-Term Lock-in</h3>
+          <p class="text-xs text-[#7A636E] leading-relaxed">
+            We earn our partnership every single month through transparent scorecards, executive MBRs, and guaranteed SLA compliance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Direct Contact CTA -->
+      <div class="text-center pt-8">
+        <a href="/contact" class="button-primary">
+          <span>Schedule a Consultation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

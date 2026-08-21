@@ -1,0 +1,56 @@
+---
+import { WHY_CHOOSE } from '@/lib/content';
+---
+
+<section class="py-24 md:py-32 bg-[#FCF6F8] border-b border-[#F0DEE4]">
+  <div class="container-wide">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="chip-synthesia mb-4">
+        <span>Why SimbNext</span>
+      </div>
+      <h2 class="headline-lg text-[#0E090D] [text-wrap:balance]">
+        Engineered for predictable digital growth.
+      </h2>
+      <p class="mt-4 body-lg text-[#3A2A33] [text-wrap:balance]">
+        We don’t run isolated marketing experiments. We architect your digital operations for compounding ROI backed by two decades of corporate systems execution.
+      </p>
+    </div>
+
+    <!-- 6-Card Grid -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {WHY_CHOOSE.map((item, idx) => (
+        <div class="card-synthesia p-7 flex flex-col justify-between hover:scale-[1.01] transition-transform">
+          <div>
+            <div class="h-12 w-12 rounded-2xl bg-[#FFF2F5] text-[#BE123C] flex items-center justify-center font-mono font-bold text-lg mb-5 border border-[#F0DEE4]">
+              0{idx + 1}
+            </div>
+            <h3 class="headline-sm text-[#0E090D]">
+              {item.title}
+            </h3>
+            <p class="mt-2.5 body-md text-[#7A636E] leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#F0DEE4] flex items-center gap-2 text-xs font-mono text-[#BE123C] font-semibold">
+            <span>SLA Governed</span>
+            <span class="text-[#F0DEE4]">•</span>
+            <span>Zero Lock-In</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Centered Action -->
+    <div class="mt-14 text-center">
+      <a href="/contact" class="button-primary">
+        <span>Schedule a Consultation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

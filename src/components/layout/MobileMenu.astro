@@ -1,0 +1,82 @@
+---
+import { NAV_LINKS, SITE } from '@/lib/site-config';
+---
+
+<!-- Mobile Drawer Backdrop -->
+<div
+  id="mobile-menu-backdrop"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+>
+</div>
+
+<!-- Mobile Drawer Content -->
+<div
+  id="mobile-menu-drawer"
+  class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white text-[#0E090D] z-50 shadow-2xl p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out lg:hidden overflow-y-auto"
+>
+  <div>
+    <!-- Header with Close Button -->
+    <div class="flex items-center justify-between pb-5 border-b border-[#F0DEE4]">
+      <a href="/" class="inline-flex items-center gap-2" aria-label="SimbNext Home">
+        <img src="/simbnext-logo.svg" alt="SimbNext" width="160" height="32" class="h-7 w-auto object-contain" />
+      </a>
+      <button
+        id="mobile-menu-close"
+        type="button"
+        class="h-9 w-9 rounded-full bg-[#FFF2F5] border border-[#F0DEE4] flex items-center justify-center text-[#0E090D] hover:text-[#FB4566] transition-colors"
+        aria-label="Close navigation menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="mt-6 flex flex-col gap-1">
+      {NAV_LINKS.map((link) => (
+        link.children ? (
+          <div class="py-2 border-b border-[#F0DEE4]">
+            <div class="px-2 py-1 text-xs font-mono font-bold uppercase tracking-wider text-[#FB4566]">
+              {link.label}
+            </div>
+            <div class="mt-1 pl-2 space-y-1">
+              {link.children.map((child) => (
+                <a
+                  href={child.href}
+                  class="block px-3 py-2 rounded-lg text-sm text-[#3A2A33] hover:bg-[#FFF2F5] hover:text-[#FB4566] transition-colors"
+                >
+                  <div class="font-semibold">{child.label}</div>
+                  <div class="text-[11px] text-[#7A636E]">{child.description}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={link.href}
+            class="px-3 py-2.5 rounded-xl text-base font-semibold text-[#0E090D] hover:bg-[#FFF2F5] hover:text-[#FB4566] transition-colors"
+          >
+            {link.label}
+          </a>
+        )
+      ))}
+    </nav>
+  </div>
+
+  <!-- Bottom CTA in Mobile Drawer -->
+  <div class="pt-6 border-t border-[#F0DEE4] space-y-3">
+    <a
+      href="/contact"
+      class="button-primary w-full text-center"
+    >
+      <span>Schedule a Consultation</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+      </svg>
+    </a>
+    <div class="text-center text-xs text-[#7A636E]">
+      📞 <a href={`https://wa.me/${SITE.phoneRaw}`} class="hover:text-[#FB4566] font-mono">{SITE.phone}</a>
+    </div>
+  </div>
+</div>

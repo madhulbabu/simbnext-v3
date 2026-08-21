@@ -1,0 +1,189 @@
+---
+import { DESKS } from '@/lib/content';
+---
+
+<section id="desks" class="py-24 md:py-32 bg-[#FFFFFF] border-b border-[#F0DEE4]">
+  <div class="container-wide">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-14">
+      <div class="chip-synthesia mb-4">
+        <span>Functional Architecture</span>
+      </div>
+      <h2 class="headline-lg text-[#0E090D]">
+        Six specialized Desks.<br class="hidden sm:inline" /> Zero operational gaps.
+      </h2>
+      <p class="mt-4 body-lg text-[#3A2A33]">
+        You don’t buy fragmented agency hours. You subscribe to dedicated accountability for recurring digital functions, governed by clear Service Level Agreements.
+      </p>
+    </div>
+
+    <!-- Interactive Desk Tabs Bar -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 p-2 rounded-2xl bg-[#FCF6F8] border border-[#F0DEE4] mb-10">
+      {DESKS.map((desk, idx) => (
+        <button
+          type="button"
+          data-desk-target={desk.id}
+          class:list={[
+            "desk-tab-btn py-3 px-3.5 rounded-xl text-left transition-all duration-200 cursor-pointer flex flex-col justify-between",
+            idx === 0
+              ? "bg-white text-[#0E090D] shadow-md border border-[#F0DEE4] ring-2 ring-[#FB4566]"
+              : "text-[#3A2A33] hover:text-[#0E090D] hover:bg-white/60"
+          ]}
+        >
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono font-bold text-[#BE123C]">{desk.index}</span>
+            <span class:list={[
+              "desk-indicator h-2 w-2 rounded-full",
+              idx === 0 ? "bg-[#E11D48]" : "bg-transparent"
+            ]}></span>
+          </div>
+          <div class="text-sm font-bold truncate">{desk.name}</div>
+          <div class="text-[11px] text-[#7A636E] truncate mt-0.5">{desk.category}</div>
+        </button>
+      ))}
+    </div>
+
+    <!-- Active Tab Content Panes -->
+    <div class="relative min-h-[440px]">
+      {DESKS.map((desk, idx) => (
+        <div
+          id={`desk-content-${desk.id}`}
+          class:list={[
+            "desk-pane card-synthesia transition-all duration-300",
+            idx === 0 ? "block" : "hidden"
+          ]}
+        >
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 items-start">
+            
+            <!-- Left Sub-column: Scope, Tagline & SLA -->
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="chip-synthesia">{desk.category}</span>
+                <span class="text-xs font-mono text-[#7A636E]">Desk {desk.index} of 06</span>
+              </div>
+
+              <h3 class="headline-md text-[#0E090D] mt-1">
+                {desk.name}
+              </h3>
+              
+              <p class="mt-2 text-base font-medium text-[#BE123C]">
+                {desk.tagline}
+              </p>
+
+              <p class="mt-4 body-md text-[#3A2A33] leading-relaxed">
+                {desk.description}
+              </p>
+
+              <!-- SLA Guarantee Box (Blush Ice Tint) -->
+              <div class="mt-7 rounded-2xl bg-[#FFF2F5] p-5 border border-[#F0DEE4]">
+                <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#BE123C] uppercase tracking-wider mb-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  Service Level Agreement (SLA)
+                </div>
+                <p class="text-sm font-semibold text-[#0E090D]">
+                  {desk.sla}
+                </p>
+              </div>
+
+              <!-- View Specifications Link -->
+              <div class="mt-6 pt-4 border-t border-[#F0DEE4]">
+                <a
+                  href={`/services/${desk.slug}`}
+                  class="inline-flex items-center gap-2 text-sm font-bold text-[#BE123C] hover:underline group"
+                >
+                  <span>View full {desk.name} scope & specifications</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Sub-column: Deliverables & Business Outcomes -->
+            <div class="space-y-6 lg:border-l lg:border-[#F0DEE4] lg:pl-10">
+              
+              <!-- Included Deliverables -->
+              <div>
+                <h4 class="label-sm text-[#7A636E] mb-3 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#FB4566]">
+                    <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+                  </svg>
+                  Monthly Deliverables & Capacity
+                </h4>
+                <ul class="space-y-2.5">
+                  {desk.deliverables.map((item) => (
+                    <li class="p-3.5 rounded-xl bg-[#FCF6F8] border border-[#F0DEE4] flex items-start gap-2.5 text-sm text-[#0E090D] font-medium">
+                      <span class="h-1.5 w-1.5 rounded-full bg-[#FB4566] mt-2 shrink-0"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <!-- Business Outcomes -->
+              <div class="pt-4 border-t border-[#F0DEE4]">
+                <h4 class="label-sm text-[#7A636E] mb-3 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#FB4566]">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                  Expected Business Outcome
+                </h4>
+                <ul class="space-y-2 text-xs sm:text-sm text-[#3A2A33]">
+                  {desk.outcomes.map((outcome) => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-[#BE123C] font-bold">✓</span>
+                      <span>{outcome}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tabButtons = document.querySelectorAll('.desk-tab-btn');
+  const panes = document.querySelectorAll('.desk-pane');
+
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-desk-target');
+
+      tabButtons.forEach((btn) => {
+        btn.classList.remove('bg-white', 'text-[#0E090D]', 'shadow-md', 'border', 'border-[#F0DEE4]', 'ring-2', 'ring-[#FB4566]');
+        btn.classList.add('text-[#3A2A33]', 'hover:text-[#0E090D]', 'hover:bg-white/60');
+        const indicator = btn.querySelector('.desk-indicator');
+        indicator?.classList.remove('bg-[#FB4566]');
+        indicator?.classList.add('bg-transparent');
+      });
+
+      button.classList.add('bg-white', 'text-[#0E090D]', 'shadow-md', 'border', 'border-[#F0DEE4]', 'ring-2', 'ring-[#FB4566]');
+      button.classList.remove('text-[#3A2A33]', 'hover:bg-white/60');
+      const activeIndicator = button.querySelector('.desk-indicator');
+      activeIndicator?.classList.add('bg-[#FB4566]');
+      activeIndicator?.classList.remove('bg-transparent');
+
+      panes.forEach((pane) => {
+        pane.classList.add('hidden');
+        pane.classList.remove('block');
+      });
+
+      const activePane = document.getElementById(`desk-content-${targetId}`);
+      if (activePane) {
+        activePane.classList.remove('hidden');
+        activePane.classList.add('block');
+      }
+    });
+  });
+</script>

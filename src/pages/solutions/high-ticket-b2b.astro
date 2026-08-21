@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SOLUTIONS } from '@/lib/content';
+
+const solution = SOLUTIONS.find((s) => s.slug === 'high-ticket-b2b')!;
+---
+
+<BaseLayout
+  title="Digital Operations for High-Ticket B2B & Industrial | SimbNext"
+  description="Automated technical RFQ intake, buyer spec sheet dispatch, executive digital roadmaps, and custom workflow automations."
+>
+  <!-- Light Header Section -->
+  <div class="pt-36 pb-20 bg-gradient-to-b from-[#FFF2F5] via-[#FCF6F8] to-white text-[#0E090D] border-b border-[#F0DEE4]">
+    <div class="container-wide max-w-3xl space-y-4">
+      <span class="chip-synthesia">
+        Industry Solution
+      </span>
+      <h1 class="headline-lg text-[#0E090D] [text-wrap:balance]">
+        {solution.title}
+      </h1>
+      <p class="body-lg text-[#3A2A33] [text-wrap:balance]">
+        {solution.description}
+      </p>
+      <div class="pt-2">
+        <a href="/contact" class="button-primary">
+          <span>Schedule a Consultation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-20 bg-[#FFFFFF]">
+    <div class="container-wide max-w-4xl space-y-12">
+      <!-- Metric Banner -->
+      <div class="p-8 rounded-3xl bg-[#FFF2F5] border border-[#F0DEE4] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold font-mono text-[#FB4566]">
+            {solution.stat}
+          </div>
+          <div class="text-sm font-semibold text-[#0E090D] mt-1">
+            Faster Technical RFQ Triage
+          </div>
+        </div>
+        <div class="text-xs text-[#7A636E] max-w-xs leading-relaxed">
+          High-ticket industrial and B2B buyers receive instant automated specification sheets and quote routing.
+        </div>
+      </div>
+
+      <!-- Core Capabilities -->
+      <div class="space-y-6">
+        <h2 class="headline-md text-[#0E090D]">
+          B2B Operations Included
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {solution.deliverables.map((d) => (
+            <div class="card-synthesia p-6">
+              <div class="text-[#FB4566] font-bold text-lg mb-2">✓</div>
+              <p class="text-sm font-medium text-[#0E090D] leading-relaxed">
+                {d}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Testimonial Quote -->
+      <div class="p-8 rounded-3xl bg-[#FCF6F8] border border-[#F0DEE4] space-y-4 shadow-xs">
+        <div class="text-amber-500 text-sm font-semibold">★★★★★ Industrial Manufacturing Partner</div>
+        <p class="text-base text-[#0E090D] italic leading-relaxed font-medium">
+          "Automated our technical specifications routing. High-ticket B2B buyers now receive instant spec sheets and quotes."
+        </p>
+        <div class="text-xs text-[#7A636E] font-mono pt-3 border-t border-[#F0DEE4]">
+          K. S. Rao • Managing Director • Precision Gears Ltd
+        </div>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center pt-6">
+        <a href="/contact" class="button-primary">
+          <span>Schedule a Consultation</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import { SITE } from '@/lib/site-config';
+---
+
+<section class="py-20 md:py-28 bg-[#FFFFFF] border-b border-[#F0DEE4]">
+  <div class="container-wide">
+    <div class="rounded-[2.5rem] bg-gradient-to-br from-[#FFF2F5] via-[#FCF6F8] to-[#FFF2F5] border border-[#F0DEE4] p-10 sm:p-14 md:p-20 text-center shadow-xs relative overflow-hidden">
+      
+      <!-- Soft ambient radial raspberry glow -->
+      <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#FB4566]/10 rounded-full blur-[100px]" aria-hidden="true"></div>
+
+      <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#BE123C] border border-[#F0DEE4] shadow-xs">
+          <span class="h-2 w-2 rounded-full bg-[#98FE7F] animate-pulse"></span>
+          ⚡ 14-Day Zero-Risk Pilot
+        </span>
+
+        <!-- Clean balanced headline (Zero orphan wrap) -->
+        <h2 class="headline-lg text-[#0E090D] max-w-2xl mx-auto [text-wrap:balance]">
+          Stop managing fragmented vendors.<br class="hidden md:inline" /> Operate like an industry leader.
+        </h2>
+
+        <p class="body-lg text-[#3A2A33] max-w-xl mx-auto font-normal [text-wrap:balance]">
+          Schedule a discovery consultation. We will analyze your lead response speed, web infrastructure, and deliver a tailored 90-day roadmap.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="button-primary">
+            <span>Schedule a Consultation</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+          <a href={`https://wa.me/${SITE.phoneRaw}`} class="button-secondary">
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-[#7A636E] font-mono">
+          <span>• 100% Senior Accountability</span>
+          <span>• Zero Long-Term Lock-in</span>
+          <span>• 5-Day Setup Sprint</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
